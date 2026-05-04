@@ -44,7 +44,7 @@ resource "aws_security_group" "app_sg" {
 
 # 4. EC2 Instance for the Application
 resource "aws_instance" "app_server" {
-  ami                    = "ami-0e2c8ca38b5913345" # Ubuntu 24.04 LTS AMI in us-east-1 (Updates regularly)
+  ami                    = "ami-04b70fa74e45c3917" # Ubuntu 24.04 LTS AMI in us-east-1 (Updates regularly)
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.app_sg.id]
 
