@@ -75,7 +75,7 @@ resource "aws_security_group" "jenkins_sg" {
 # 4. EC2 Instance with User Data Bootstrap
 resource "aws_instance" "jenkins_server" {
   ami           = "ami-0e001c9271cf7f3b9" # Ubuntu 22.04 LTS in us-east-1
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   subnet_id     = aws_subnet.public_subnet.id
   vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
 
